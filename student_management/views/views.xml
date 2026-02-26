@@ -26,19 +26,32 @@
         <field name="model">student.student</field>
         <field name="arch" type="xml">
             <form>
-                <group>
-                    <field name="name"/>
-                    <field name="student_id"/>
-                    <field name="image"/>
-                    <field name="dob"/>
-                    <field name="gender"/>
-                    <field name="email"/>
-                    <field name="phone"/>
-                    <field name="address"/>
-                    <field name="guardian_name"/>
-                    <field name="guardian_phone"/>
-                    <field name="admission_date"/>
-                </group>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="student_id"/>
+                        <field name="image"/>
+                        <field name="dob"/>
+                        <field name="gender"/>
+
+                        <notebook>
+                            <page string="Contact">
+                                <group>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                    <field name="address"/>
+                                </group>
+                            </page>
+                            <page string="Guardian_info">
+                                <group>
+                                    <field name="guardian_name"/>
+                                    <field name="guardian_phone"/>
+                                    <field name="admission_date"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
