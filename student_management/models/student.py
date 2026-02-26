@@ -6,7 +6,7 @@ class Student(models.Model):
 
     name = fields.Char('Student Name')
     student_id = fields.Char('Student ID')
-    image = fields.Char('Student Image')
+    image = fields.Binary('Student Image')
     dob = fields.Date('Date of Birth')
     gender = fields.Selection([
         ('male', 'Male'),
