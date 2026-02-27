@@ -59,6 +59,22 @@
     <!--    Form view of student.student model(End)-->
 
 
+    <!--    Search view of student.student model(End)-->
+
+    <record id="student_student_view_search" model="ir.ui.view">
+        <field name="name">Student student search view</field>
+        <field name="model">student.student</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="student_id"/>
+            </search>
+        </field>
+    </record>
+
+    <!--    Search view of student.student model(End)-->
+
+
     <!--    Action of student.student model(Start)-->
     <record id="student_student_action" model="ir.actions.act_window">
         <field name="name">Student</field>
