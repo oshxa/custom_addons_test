@@ -19,3 +19,6 @@ class Student(models.Model):
     guardian_name = fields.Char('Guardian Name')
     guardian_phone = fields.Char('Guardian Phone')
     admission_date = fields.Date('Admission Date')
+
+    def print_something(self):
+        print(self.name,'the button get clicked')

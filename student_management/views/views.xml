@@ -26,6 +26,9 @@
         <field name="model">student.student</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button type="object" string="Click" class="oe_highlight" name="print_something"/>
+                </header>
                 <sheet>
                     <field name="image" widget="image" class="oe_avatar"/>
                     <group>
