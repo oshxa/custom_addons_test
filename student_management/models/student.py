@@ -33,3 +33,10 @@ class Student(models.Model):
             if student.student_id == vals.get('student_id'):
                 raise ValidationError('Student ID is already in use')
         return super().create(vals)
+
+    def write(self,vals):
+        existing_student = request.env['student.student'].search([])
+        for student in existing_student:
+            if student.student_id == vals.get('student_id'):
+                raise ValidationError('Student ID is already in use')
+        return super().write(vals)
