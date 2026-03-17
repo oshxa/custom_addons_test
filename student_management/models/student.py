@@ -26,6 +26,16 @@ class Student(models.Model):
     def print_something(self):
         print(self.name,'the button get clicked')
 
+    def show_rainbow(self):
+        return{
+            'effect':{
+                'fadeout': 'slow',
+                'message': 'This is the rainbow effect. Congrats! you have done it.',
+                'img_url': '/web/static/img/smile.svg',
+                'type': 'rainbow_man'
+            }
+        }
+
     @api.model
     def create(self,vals):
         existing_student =  request.env['student.student'].search([])
