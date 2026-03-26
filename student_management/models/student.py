@@ -2,6 +2,12 @@ from odoo import fields, models, api
 from odoo.http import request
 from odoo.exceptions import ValidationError
 
+class StudentClass(models.Model):
+    _name = 'student.class'
+    _description = 'Student Class'
+
+    name = fields.Char(string='Name')
+
 class Student(models.Model):
     _name = 'student.student'
     description = 'Student info'
@@ -15,6 +21,7 @@ class Student(models.Model):
         ('female', 'Female'),
         ('other', 'Other')
     ],string='Gender')
+    class_id = fields.Many2one('student.class', string='Class')
     email = fields.Char('Email Address')
     phone = fields.Char('Phone Number')
     address = fields.Char('Address')
