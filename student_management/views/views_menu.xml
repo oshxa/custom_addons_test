@@ -5,4 +5,5 @@
     <menuitem id="student_student_student_menu" name="Students" sequence="0" parent="student_student_root_menu"
               action="student_student_action"/>
     <menuitem id="student_class_menu" name="Classes" sequence="1" parent="student_student_root_menu" action="student_class_action"/>
+    <menuitem id="student_subject_menu" name="Subjects" sequence="2" parent="student_student_root_menu" action="student_subject_action"/>
 </odoo>
